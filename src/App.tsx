@@ -1,15 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import BookListPage from './pages/BookListPage';
-import CreateBookPage from './pages/CreateBookPage';
-import BorrowSummaryPage from './pages/BorrowSummaryPage';
-import EditBookPage from './pages/EditBookPage';
-import BorrowPage from './pages/BorrowPage';
-import NotFoundPage from './pages/NotFoundPage';
-import { ToastContainer } from 'react-toastify';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import BookListPage from "./pages/BookListPage";
+import CreateBookPage from "./pages/CreateBookPage";
+import BorrowSummaryPage from "./pages/BorrowSummaryPage";
+import EditBookPage from "./pages/EditBookPage";
+import BorrowPage from "./pages/BorrowPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -29,7 +29,17 @@ function App() {
         </main>
         <Footer />
       </div>
-      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Router>
   );
 }
