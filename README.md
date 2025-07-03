@@ -4,8 +4,9 @@
   <img src="./public/preview.png" height="400" width="800" alt="Preview ShelfWise" />
 </div>
 
-[![Frontend Live Demo](https://img.shields.io/badge/Live%20Demo-Frontend-blue?style=for-the-badge&logo=vercel)](https://frontend-demo.vercel.app/) 
-[![Backend Live API](https://assignment-3-l2-three.vercel.app/api)](https://assignment-3-l2-three.vercel.app/) 
+[![Frontend Live Demo](https://shelfwise-teal.vercel.app/)](https://shelfwise-teal.vercel.app/) 
+[![Backend Live API](https://assignment-3-l2-three.vercel.app/)](https://assignment-3-l2-three.vercel.app/) 
+[![Backend Repository](https://github.com/maksudulhaque2000/Assignment-3-L2)](https://github.com/maksudulhaque2000/Assignment-3-L2)
 
 This project is a meticulously crafted, clean, functional, and highly responsive client-side application designed to empower efficient management of books and precise tracking of borrowing activities within a library system. It offers a seamless user experience by interacting with a separate RESTful API backend, prioritizing robust state management, intuitive UI design, and essential core functionalities without the complexities of authentication or advanced filtering.
 
@@ -68,8 +69,8 @@ This project is built using a modern and robust technology stack:
 
 Explore the live application and its backend API:
 
--   **Frontend Live Demo:** [https://frontend-demo.vercel.app/](https://frontend-demo.vercel.app/)
--   **Backend Live API:** [https://assignment-3-l2-three.vercel.app/api](https://assignment-3-l2-three.vercel.app/api)
+-   **Frontend Live Demo:** [https://shelfwise-teal.vercel.app/](https://shelfwise-teal.vercel.app/)
+-   **Backend Live API:** [https://assignment-3-l2-three.vercel.app](https://assignment-3-l2-three.vercel.app)
 -   **Backend GitHub Repository:** [https://github.com/maksudulhaque2000/Assignment-3-L2](https://github.com/maksudulhaque2000/Assignment-3-L2)
 
 ## 🛠️ Setup & Local Installation
@@ -153,4 +154,4 @@ Contributions are welcome! Feel free to fork the repository, open issues, or sub
 
 This project is for personal and educational use. All rights reserved by **[Maksudul Haque]**.
 
-Copyright (c) [2025] [Maksudul Haque]
+Copyright © 2025 [Maksudul Haque]
