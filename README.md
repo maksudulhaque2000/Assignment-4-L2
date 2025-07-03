@@ -4,9 +4,8 @@
   <img src="./public/preview.png" height="400" width="800" alt="Preview ShelfWise" />
 </div>
 
-[![Frontend Live Demo](https://shelfwise-teal.vercel.app/)](https://shelfwise-teal.vercel.app/) 
-[![Backend Live API](https://assignment-3-l2-three.vercel.app/)](https://assignment-3-l2-three.vercel.app/) 
-[![Backend Repository](https://github.com/maksudulhaque2000/Assignment-3-L2)](https://github.com/maksudulhaque2000/Assignment-3-L2)
+## 🌐 [Live Deployment Link](https://shelfwise-teal.vercel.app/)
+## 🔗 [Backend Repository Link](https://github.com/maksudulhaque2000/Assignment-3-L2)
 
 This project is a meticulously crafted, clean, functional, and highly responsive client-side application designed to empower efficient management of books and precise tracking of borrowing activities within a library system. It offers a seamless user experience by interacting with a separate RESTful API backend, prioritizing robust state management, intuitive UI design, and essential core functionalities without the complexities of authentication or advanced filtering.
 
