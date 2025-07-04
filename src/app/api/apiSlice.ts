@@ -34,6 +34,8 @@ export const api = createApi({
 
     getBookById: builder.query<ApiResponseWrapper<IBook>, string>({
       query: (id) => `books/${id}`,
+      providesTags: (result, error, id) =>
+        result ? [{ type: "Books", id }] : [],
     }),
 
     updateBook: builder.mutation<
@@ -45,7 +47,10 @@ export const api = createApi({
         method: "PUT",
         body: changes,
       }),
-      invalidatesTags: ["Books"],
+      invalidatesTags: (result, error, { id }) => [
+        "Books",
+        { type: "Books", id },
+      ],
     }),
 
     deleteBook: builder.mutation<ApiResponseWrapper<null>, string>({

@@ -4,23 +4,24 @@ import {
   useGetBookByIdQuery,
   useUpdateBookMutation,
 } from "../app/api/apiSlice";
-import { IBookFormInput } from "../types";
+import { IBookFormInput, IBook } from "../types";
 import { toast } from "react-toastify";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 const EditBookPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
 
   const {
     data: responseData,
     isLoading: isLoadingBook,
     isError: isErrorBook,
     error: errorBook,
-  } = useGetBookByIdQuery(id!, {
+  } = useGetBookByIdQuery(id as string, {
     skip: !id,
   });
   const book = responseData?.data;
+
+  const navigate = useNavigate();
 
   const [
     updateBook,
@@ -67,7 +68,10 @@ const EditBookPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!id) return;
+    if (!id) {
+      toast.error("Book ID is missing.");
+      return;
+    }
 
     if (!formData.genre) {
       toast.error("Please select a genre.");

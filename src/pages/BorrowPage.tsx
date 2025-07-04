@@ -14,17 +14,18 @@ const MySwal = withReactContent(Swal);
 
 const BorrowPage: React.FC = () => {
   const { bookId } = useParams<{ bookId: string }>();
-  const navigate = useNavigate();
 
   const {
     data: responseData,
     isLoading: isLoadingBook,
     isError: isErrorBook,
     error: errorBook,
-  } = useGetBookByIdQuery(bookId!, {
+  } = useGetBookByIdQuery(bookId as string, {
     skip: !bookId,
   });
   const book = responseData?.data;
+
+  const navigate = useNavigate();
 
   const [
     borrowBook,
@@ -43,7 +44,7 @@ const BorrowPage: React.FC = () => {
 
   useEffect(() => {
     if (bookId) {
-      setFormData((prev) => ({ ...prev, book: bookId }));
+      setFormData((prev) => ({ ...prev, book: bookId as string }));
     }
   }, [bookId]);
 
@@ -57,7 +58,10 @@ const BorrowPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!bookId) return;
+    if (!bookId) {
+      toast.error("Book ID is missing.");
+      return;
+    }
 
     if (!book) {
       toast.error("Book details not loaded. Please wait or refresh.");

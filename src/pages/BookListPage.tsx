@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useGetBooksQuery, useDeleteBookMutation } from "../app/api/apiSlice";
 import { IBook } from "../types";
 import { Link } from "react-router-dom";
@@ -155,6 +155,12 @@ const BookListPage: React.FC = () => {
                   )}
                 </td>
                 <td className="py-4 px-6 whitespace-nowrap text-right text-sm font-medium">
+                  <Link
+                    to={`/books/${book._id}`}
+                    className="text-purple-600 hover:text-purple-900 mr-4"
+                  >
+                    View Details
+                  </Link>
                   <Link
                     to={`/edit-book/${book._id}`}
                     className="text-indigo-600 hover:text-indigo-900 mr-4"
